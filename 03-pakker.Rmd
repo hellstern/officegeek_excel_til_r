@@ -1,1 +1,39 @@
-# Pakker {pakker}
+# Pakker
+Pakker er en meget central del af R.
+Pakker giver dig mulighed for at udvide R med lige netop den funktionalitet du har behov for.
+
+Du finder pakkerne på CRAN (The Comprehensive R Archive Network) - <a href="https://cran.rstudio.com" target="_blank">https://cran.rstudio.com</a> - det er også her fra du kan installere dem. Det er også muligt at installere en pakke fra en fil; zip eller tar.gz
+
+
+## Pakker du skal bruge
+På dette kursus kommer du til at bruge følgende pakker:
+
+* tidyverse
+    * dplyr
+    * ggplot2
+    * readxl
+* 
+* shiny
+
+## Installation
+Du kan installere pakker via R kode eller ved at bruge de grafiske muligher i RStudio.
+Fordelen ved R kode er at du meget nemt kan gøre det sammen igen på f.eks. en anden computer.
+
+Ved begge metoder er der to trin du skal igennem:
+
+1. Installation af pakken
+2. Aktivering af pakken - i den fil du arbejder med
+
+**Installation**
+Her bliver pakken hentet og lagt ned på din computer
+
+**Aktivering**
+Når pakken er installert, skal du aktivere pakken i den fil hvor du vil bruge den
+
+**Via GUI**
+
+
+
+
+**Via kode**
+

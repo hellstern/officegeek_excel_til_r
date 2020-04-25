@@ -1,0 +1,29 @@
+﻿# Working Directory {#workingdirectory}
+R bruger en mappe som *Working Directory*. Det er nemmere at tilgå filer, der ligger i denne mappe. 
+De filer der er placeret i denne mappe kan du tilgå uden at angive stien til filen.
+
+I RStudio har du to muligheder for at ændre dit "Working Directory":
+
+1. Via kode
+2. Vi RSTUDIO GUI - Grafisk
+
+**Kode**
+
+Du kan se den aktive mappe med: getwd()
+Du kan ændre denne mappe med: setwd("C:\\Users\\tuhe\\Documents\\r_files\\")
+
+```{r eval=FALSE}
+getwd()
+setwd()
+```
+
+**GUI**
+I den nederste højre del af din skærm skal du gøre følgende:
+
+1. Vælg mappen **Files**
+2. Find den mappe som du vil gøre til *Working Directory*"
+3. Klik på knappen *More*
+4. Vælg *Set As Working Directory*
+
+*Tip* - Når du brugere denne metode kan du se den kode der afvikles i det nederste venstre vindue.
+

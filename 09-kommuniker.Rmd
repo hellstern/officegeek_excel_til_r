@@ -1,0 +1,7 @@
+﻿# Kommuniker
+Med pakken *shiny* er det muligt for dig at opbygge og dele interaktive web applikationer direkte fra R.
+Du dele dine web applikationer via 
+
+## Shiny
+
+https://github.com/abhat222/Data-Science--Cheat-Sheet/blob/master/R%20Cheat%20Sheet/shiny-cheatsheet.pdf

@@ -1,0 +1,29 @@
+# Data {#data}
+Jeg bruger data fra et fiktivt Microsoft firma - *Northwind* - de sammen data er tilgængelige i to formater.
+
+**CSV**
+
+* orders.csv
+* order_details.csv
+* customers.csv
+* products.csv
+* employess.csv
+* categories.csv
+* supliers.csv
+
+
+**Excel**
+
+* orders.xlsx
+* order_details.xlsx
+* customers.xlsx
+* products.xlsx
+* employess.xlsx
+* categories.xlsx
+* supliers.xlsx
+
+
+## readr
+
+
+

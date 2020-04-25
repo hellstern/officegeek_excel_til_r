@@ -1,0 +1,25 @@
+﻿# tidyverse
+
+## Workflow
+Dette kursus er basert på et typisk workflow med brug af de forskellige pakker i Tidyvers pakken.
+
+![](image/workflow.png)
+
+
+
+
+## pipe
+
+%>% Pipe
+
+```{r eval=FALSE}
+mean(1:10)
+
+1:10 %>%
+    mean()
+```
+
+data %>%
+    gør-noget() %>%
+    gør-noget-andet() %>%
+    gør-det-sidste()

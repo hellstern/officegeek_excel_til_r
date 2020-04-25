@@ -1,3 +1,16 @@
 # Hvad er R {#hvad_er_r}
+R er et open-source programmeringssprog der er meget populært blandt statistikere, og andre der arbejder med dataanalyse.
+
+R indeholder en meget bred vifte af analyse-værktøjer, samt gode mulighed for at lave grafik.
+
+R bliver brugt af mere end 2 millioner mennesker og er et af verdens mest populære programmingssprog når det gælder statistiske beregninger. 
+
+R fra 1993 er implementation af sproget S, som blev defineret tilbage i 1976 hos Bell Labs. R er open-source frigivet under GNU GPL licensen.
+
+I 2015 købte Microsoft firmaet *Revolution Analytics*, som har lavet en specielt server udgave af R, som Microsoft har integeret med SQL Server 2016 og Azure platformen under navnet *Microsoft R Server* - Læs mere her: <a href="https://www.microsoft.com/en-us/sql-server/machinelearningserver" target="_blank">https://www.microsoft.com/en-us/sql-server/machinelearningserver</a>
+
+Udover selve R findes mere end 15.000 udvidelsespakker, som frit kan hentes fra *Comprehensive R Archive Network* (CRAN). Bl.a. pakker der kan indlæse data fra konkurrende produkter som SAS og SPSS.
+
+R er et dynamisk programmeringssprog, der ikke skal kompileres som mange andre programmeringssprog.
 
 
