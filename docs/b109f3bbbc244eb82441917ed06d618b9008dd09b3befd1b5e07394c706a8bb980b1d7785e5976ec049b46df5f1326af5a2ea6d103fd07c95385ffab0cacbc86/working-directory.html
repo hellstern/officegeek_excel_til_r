@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduktion til R</title>
-  <meta name="description" content="Introduktion til R programmering" />
+  <title>Kapitel 5 Working Directory | Introduktion til R</title>
+  <meta name="description" content="Kapitel 5 Working Directory | Introduktion til R programmering" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduktion til R" />
+  <meta property="og:title" content="Kapitel 5 Working Directory | Introduktion til R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Introduktion til R programmering" />
+  <meta property="og:description" content="Kapitel 5 Working Directory | Introduktion til R programmering" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduktion til R" />
+  <meta name="twitter:title" content="Kapitel 5 Working Directory | Introduktion til R" />
   
-  <meta name="twitter:description" content="Introduktion til R programmering" />
+  <meta name="twitter:description" content="Kapitel 5 Working Directory | Introduktion til R programmering" />
   
 
 <meta name="author" content="Tue Hellstern" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="hvad-er-r.html"/>
+<link rel="prev" href="pakker.html"/>
+<link rel="next" href="data.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -176,13 +176,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduktion til R</h1>
-<p class="author"><em>Tue Hellstern</em></p>
-<p class="date"><em>2020-04-25</em></p>
-</div>
-<div id="introduktion" class="section level1">
-<h1><span class="header-section-number">Kapitel 1</span> Introduktion</h1>
+<div id="working-directory" class="section level1">
+<h1><span class="header-section-number">Kapitel 5</span> Working Directory</h1>
+<p>R bruger en mappe som <em>Working Directory</em>. Det er nemmere at tilgå filer, der ligger i denne mappe.
+De filer der er placeret i denne mappe kan du tilgå uden at angive stien til filen.</p>
+<p>I RStudio har du to muligheder for at ændre dit “Working Directory”:</p>
+<ol style="list-style-type: decimal">
+<li>Via kode</li>
+<li>Vi RSTUDIO GUI - Grafisk</li>
+</ol>
+<p><strong>Kode</strong></p>
+<p>Du kan se den aktive mappe med: getwd()
+Du kan ændre denne mappe med: setwd(“C:\Users\tuhe\Documents\r_files\”)</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">setwd</span>(<span class="st">&quot;~/GitHub/officegeek_excel_til_r&quot;</span>)</a></code></pre></div>
+<p><strong>GUI</strong>
+I den nederste højre del af din skærm skal du gøre følgende:</p>
+<ol style="list-style-type: decimal">
+<li>Vælg mappen <strong>Files</strong></li>
+<li>Find den mappe som du vil gøre til <em>Working Directory</em></li>
+<li>Klik på knappen <em>More</em></li>
+<li>Vælg <em>Set As Working Directory</em></li>
+</ol>
+<p><em>Tip</em> - Når du brugere denne metode kan du se den kode der afvikles i det nederste venstre vindue.</p>
 
 </div>
             </section>
@@ -190,8 +206,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="hvad-er-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pakker.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -222,7 +238,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-workingdirectory.Rmd",
 "text": "Edit"
 },
 "history": {

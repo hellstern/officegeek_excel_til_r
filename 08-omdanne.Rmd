@@ -3,10 +3,11 @@ Du vil have brug for at ændre de data som du arbejder med. Det kan være at der
 
 
 ## dplyr
-dplyr er en "*grammar of data manipulation*"
-dypler hjælper dig med at løse de mest almindelige udfordringer ved datamanipulation:
+![](image/dplyr.png)
+dplyr er en *grammar of data manipulation*
+Du kan læse mere om dplyr pakken her: <a href="https://dplyr.tidyverse.org/index.html" target="_blank">dplyr.tidyverse.org/index.html</a>
 
-Du kan læse mer eom dypl pakken her: <a href="https://dplyr.tidyverse.org/index.html" target="_blank">dplyr.tidyverse.org/index.html</a>
+dplyr hjælper dig med at løse de mest almindelige udfordringer ved datamanipulation:
 
 * **mutate()** - tilføjer nye felter/koloner
 * **select()** - vælger koloner

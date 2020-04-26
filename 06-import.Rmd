@@ -1,0 +1,73 @@
+# Data {#data}
+Jeg bruger data fra et fiktivt Microsoft firma - *Northwind* - de sammen data er tilgængelige via CSV, Excel og en MySQL database.
+
+**CSV**
+
+* orders.csv
+* order_details.csv
+* customers.csv
+* products.csv
+* employess.csv
+* categories.csv
+* supliers.csv
+
+
+**Excel**
+
+* orders.xlsx
+* order_details.xlsx
+* customers.xlsx
+* products.xlsx
+* employess.xlsx
+* categories.xlsx
+* supliers.xlsx
+
+** MySQL - tabeller
+
+* orders
+* order_details
+* customers
+* products
+* employess
+* categories
+* supliers
+
+
+## readr
+
+
+
+## RMySQL
+Der findes flere pakker der gør det muligt at forbinde RStudio med en MySQL database.
+Her brugere jeg en pakke ved navn *RMySQL*
+
+```{r eval=FALSE}
+install.packages("RMySQL")
+library(RMySQL)
+```
+
+For at oprette en forbindelse til en MySQL server skal du bruge:
+
+* MySQL bruger - 
+* Password - 
+* Databasenavn - 
+
+Jeg har en test MySQL database kørende som du kan forbinde til på denne måde:
+
+```{r eval=FALSE}
+MinDataBase = dbConnect(MySQL(), 
+    user='User_DataBase', 
+    password='Password_DB', 
+    dbname='Name_DataBase', 
+    host='Your hosting')
+```
+
+For at hente data fra MySQL serveren over til R skal du bruge denne kommando:
+
+```{r eval=FALSE}
+customers = dbGetQuery(MinDataBase, "select * from Customers")
+```
+
+Du kan her bruge de SQL kommandoer du normalt ville bruge på MySQL til at udvælge data.
+
+
