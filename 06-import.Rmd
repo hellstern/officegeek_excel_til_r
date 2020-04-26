@@ -1,4 +1,11 @@
 # Data {#data}
+De data du vil arbejde med i R skal importeres.
+Når du importere overføre du data til en variabel i Excel.
+R har en dataframe som hedder en tribble som er en nyere version af den orginale R dataframe
+
+
+
+## Northwind
 Jeg bruger data fra et fiktivt Microsoft firma - *Northwind* - de sammen data er tilgængelige via CSV, Excel og en MySQL database.
 
 **CSV**
@@ -22,7 +29,7 @@ Jeg bruger data fra et fiktivt Microsoft firma - *Northwind* - de sammen data er
 * categories.xlsx
 * supliers.xlsx
 
-** MySQL - tabeller
+**MySQL** - tabeller
 
 * orders
 * order_details
@@ -34,6 +41,45 @@ Jeg bruger data fra et fiktivt Microsoft firma - *Northwind* - de sammen data er
 
 
 ## readr
+Jeg får meget tit data i Excel filer hvor det er vigtigt med en import funktion der løser opgaven nemt, fleksibet og hurtigt.
+**read_excel** er efter min mening den bedste funktion til import fra Excel filer, den har den fleksibiliatet og funktionalitet jeg har behov for.
+Den har også den fordel at den indlæser data i formatet **tibble**, hvilket gør det nemmere og hurtigere at arbejde med.
+
+**read_excel**, filder selv ud af om det er en xls eller en xlsx Excel fil du vil importere. Hvis du kender formatet på din Excel fil, kan du med fordel bruge:
+
+* read_xls
+* read_xlsx
+
+
+```{r eval=FALSE}
+library(readxl)
+
+salg <- read_xlsx("webinar_data.xlsx")                          # Indlæser første ark
+salg <- read_xlsx("webinar_data.xlsx", sheet = "salgs_data")    # Indlæser arket "salgs_data"
+salg <- read_xlsx("webinar_data.xlsx", sheet = 3)               # Indlæser ark 3
+```
+
+**read_excel** har følgende parametere:
+
+* path
+* sheet
+* range
+* col_names
+* col_types
+* na
+* trim_ws
+* skip
+* n_max
+* guess_max
+* progress
+* name_repair
+
+```{r eval=FALSE}
+read_excel(path, sheet = NULL, range = NULL, col_names = TRUE,
+  col_types = NULL, na = "", trim_ws = TRUE, skip = 0,
+  n_max = Inf, guess_max = min(1000, n_max),
+  progress = readxl_progress(), .name_repair = "unique")
+```
 
 
 
@@ -58,7 +104,7 @@ Jeg har en test MySQL database kørende som du kan forbinde til på denne måde:
 MinDataBase = dbConnect(MySQL(), 
     user='User_DataBase', 
     password='Password_DB', 
-    dbname='Name_DataBase', 
+    dbname='Northwind', 
     host='Your hosting')
 ```
 
@@ -69,5 +115,3 @@ customers = dbGetQuery(MinDataBase, "select * from Customers")
 ```
 
 Du kan her bruge de SQL kommandoer du normalt ville bruge på MySQL til at udvælge data.
-
-

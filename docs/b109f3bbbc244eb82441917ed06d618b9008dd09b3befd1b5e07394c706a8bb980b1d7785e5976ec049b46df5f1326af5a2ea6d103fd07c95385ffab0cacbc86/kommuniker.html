@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 4 Pakker | Introduktion til R</title>
-  <meta name="description" content="Kapitel 4 Pakker | Introduktion til R programmering" />
+  <title>Kapitel 8 Kommuniker | Introduktion til R</title>
+  <meta name="description" content="Kapitel 8 Kommuniker | Introduktion til R programmering" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 4 Pakker | Introduktion til R" />
+  <meta property="og:title" content="Kapitel 8 Kommuniker | Introduktion til R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Kapitel 4 Pakker | Introduktion til R programmering" />
+  <meta property="og:description" content="Kapitel 8 Kommuniker | Introduktion til R programmering" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 4 Pakker | Introduktion til R" />
+  <meta name="twitter:title" content="Kapitel 8 Kommuniker | Introduktion til R" />
   
-  <meta name="twitter:description" content="Kapitel 4 Pakker | Introduktion til R programmering" />
+  <meta name="twitter:description" content="Kapitel 8 Kommuniker | Introduktion til R programmering" />
   
 
 <meta name="author" content="Tue Hellstern" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rstudio.html"/>
-<link rel="next" href="working-directory.html"/>
+<link rel="prev" href="omdanne.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -186,63 +186,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pakker" class="section level1">
-<h1><span class="header-section-number">Kapitel 4</span> Pakker</h1>
-<p>Pakker er en meget central del af R.
-En pakker udvide R med lige netop den funktionalitet du har behov for.
-Der findes over 15.000 pakker - så der er nok også en der kan hjælpe dig</p>
-<p>Du finder pakkerne på CRAN (The Comprehensive R Archive Network) - <a href="https://cran.rstudio.com" target="_blank">https://cran.rstudio.com</a> - det er også her fra du kan installere dem. Det er også muligt at installere en pakke fra en fil; zip eller tar.gz</p>
-<div id="pakker-du-skal-bruge" class="section level2">
-<h2><span class="header-section-number">4.1</span> Pakker du skal bruge</h2>
-<p>På dette kursus kommer du til at bruge følgende pakker:</p>
-<ul>
-<li>tidyverse
-<ul>
-<li>readr</li>
-<li>readxl</li>
-<li>tidyr</li>
-<li>dplyr</li>
-<li>stringr</li>
-<li>ggplot2</li>
-</ul></li>
-<li>shiny</li>
-</ul>
+<div id="kommuniker" class="section level1">
+<h1><span class="header-section-number">Kapitel 8</span> Kommuniker</h1>
+<p>Med pakken <em>shiny</em> er det muligt for dig at opbygge og dele interaktive web applikationer direkte fra R.</p>
+<p>Du dele dine web applikationer via ShinyApps.io</p>
+<div id="shiny" class="section level2">
+<h2><span class="header-section-number">8.1</span> Shiny</h2>
+<p><a href="https://github.com/abhat222/Data-Science--Cheat-Sheet/blob/master/R%20Cheat%20Sheet/shiny-cheatsheet.pdf" class="uri">https://github.com/abhat222/Data-Science--Cheat-Sheet/blob/master/R%20Cheat%20Sheet/shiny-cheatsheet.pdf</a></p>
 </div>
-<div id="installation" class="section level2">
-<h2><span class="header-section-number">4.2</span> Installation</h2>
-<p>Du kan installere pakker via R kode eller ved at bruge de grafiske muligher i RStudio.
-Fordelen ved R kode er at du meget nemt kan gøre det sammen igen på f.eks. en anden computer.</p>
-<p>Ved begge metoder er der to trin du skal igennem:</p>
+<div id="shinyapps.io" class="section level2">
+<h2><span class="header-section-number">8.2</span> ShinyApps.io</h2>
+<p>Hvis du skal dele det med mange andre, er der muligt at bruge en cloud løsning – ShinyApps.io</p>
+<p>Hvis du vil bruge ShinyApps.io skal følgende være på plads:</p>
+<p>• Du skal også bruge pakken rsconnect
+• Du skal oprette din på ShinyApps.io som brugere
+• Du skal bruge en token fra din konto i din App</p>
+<p>ShinyApps.io har flere forskellige løsninger startende ved en gratis til en løsning der koster 299 USD pr. måned.</p>
+<p>Den gratis løsning indeholder følgende:</p>
+<p>• 5 Applikationer
+• 25 Aktive Hosts
+• Support via deres www side
+• Logo fra RStudio i din applikation</p>
+</div>
+<div id="opret-forbindelse" class="section level2">
+<h2><span class="header-section-number">8.3</span> Opret forbindelse</h2>
+<p>For at publicere din applikation på ShinyApps.io skal du gøre følgende:</p>
 <ol style="list-style-type: decimal">
-<li>Installation af pakken</li>
-<li>Aktivering af pakken - i den fil du arbejder med</li>
+<li>Opret og test din løsning lokalt</li>
+<li>Klik på knappen Publish to Server</li>
+<li>Vælg ShinyApps.io</li>
+<li>Du skal kopiere din Token fra ShinyApps.io ind i dette vindow
+Du skal gå ind på konto på ShinyApps.io og vælge:
+<strong>Account – Tokens</strong> – Kopier din token – Husk klik på knappen <strong>Show secret</strong> før du kopierer</li>
 </ol>
-<p><strong>Installation</strong>
-Her bliver pakken hentet og lagt ned på din computer</p>
-<p><strong>Aktivering</strong>
-Når pakken er installert, skal du aktivere pakken i den fil hvor du vil bruge den</p>
-<p><strong>Via GUI</strong>
-Du kan nemt installere dine pakker via RStudio.</p>
-<ol style="list-style-type: decimal">
-<li>Vælg fanen <strong>Packages</strong> i det nederste højre vindue</li>
-<li>Klik på <strong>Install</strong></li>
-<li>Skriv pakkens navn</li>
-<li>Klik <strong>Install</strong></li>
-</ol>
-<p><img src="image/pakker.png" /></p>
-<p>Samme sted har du muliged for at opdatere dine pakker og du kan få yderligere information om en pakke hvis du klikker på navnet.</p>
-<p><strong>Via kode</strong>
-Der er to kommandoer du skal huske den første installere pakken hvis den ikke er på din computer, den anden <em>aktivere</em> pakken fro det script du arbejder i.</p>
-<ol style="list-style-type: decimal">
-<li>install.packages(“pakke_navn”)</li>
-<li>library(pakke_navn)</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>()                     <span class="co"># Pakker der er på din computer</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)   <span class="co"># install - ggplot</span></a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="kw">library</span>(dplyr)                <span class="co"># load - dplyr</span></a>
-<a class="sourceLine" id="cb1-4" title="4"></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="kw">update.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)  <span class="co"># Update - tidyverse</span></a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="kw">remove.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)  <span class="co"># Fjern - tidyverse</span></a></code></pre></div>
+<p>ShinyApps.io har en rigtig god dokumentation som du kan finde her: <a href="https://docs.rstudio.com/shinyapps.io/index.html" class="uri">https://docs.rstudio.com/shinyapps.io/index.html</a></p>
+
+<p>﻿# Links
+dgdgdfg dfg</p>
+</div>
+<div id="sfdsfsd" class="section level2">
+<h2><span class="header-section-number">8.4</span> sfdsfsd</h2>
+
+<p>﻿# tidyverse</p>
+</div>
+<div id="workflow" class="section level2">
+<h2><span class="header-section-number">8.5</span> Workflow</h2>
+<p>Dette kursus er basert på et typisk workflow med brug af de forskellige pakker i Tidyvers pakken.</p>
+<p><img src="image/workflow.png" /></p>
+</div>
+<div id="pipe" class="section level2">
+<h2><span class="header-section-number">8.6</span> pipe</h2>
+<p>%&gt;% Pipe</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">mean</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb13-2" title="2"></a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="dv">1</span><span class="op">:</span><span class="dv">10</span> <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-4" title="4"><span class="st">    </span><span class="kw">mean</span>()</a></code></pre></div>
+<p>data %&gt;%
+gør-noget() %&gt;%
+gør-noget-andet() %&gt;%
+gør-det-sidste()</p>
 
 </div>
 </div>
@@ -251,8 +253,8 @@ Der er to kommandoer du skal huske den første installere pakken hvis den ikke e
           </div>
         </div>
       </div>
-<a href="rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="working-directory.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="omdanne.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -283,7 +285,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-pakker.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/10-kommuniker.Rmd",
 "text": "Edit"
 },
 "history": {

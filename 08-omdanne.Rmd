@@ -17,7 +17,7 @@ dplyr hjælper dig med at løse de mest almindelige udfordringer ved datamanipul
 
 
 
-### Eksemper
+### Eksempler
 
 ```{r eval=FALSE}
 starwars %>% 
