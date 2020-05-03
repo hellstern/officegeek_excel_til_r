@@ -1,4 +1,4 @@
-# Kommuniker
+# Kommuniker {#kommuniker}
 Med pakken *shiny* er det muligt for dig at opbygge og dele interaktive web applikationer direkte fra R.
 
 Du dele dine web applikationer via ShinyApps.io

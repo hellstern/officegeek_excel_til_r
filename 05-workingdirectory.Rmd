@@ -1,4 +1,4 @@
-# Working Directory
+# Working Directory {#workingdirectory}
 R bruger en mappe som *Working Directory*. Det er nemmere at tilgå filer, der ligger i denne mappe. 
 De filer der er placeret i denne mappe kan du tilgå uden at angive stien til filen.
 
@@ -18,6 +18,7 @@ setwd("~/GitHub/officegeek_excel_til_r")
 ```
 
 **GUI**
+
 I den nederste højre del af din skærm skal du gøre følgende:
 
 1. Vælg mappen **Files**

@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Hvad er R {#hvad_er_r}
 R er et open-source programmeringssprog der er meget populært blandt statistikere, og andre der arbejder med dataanalyse.
 

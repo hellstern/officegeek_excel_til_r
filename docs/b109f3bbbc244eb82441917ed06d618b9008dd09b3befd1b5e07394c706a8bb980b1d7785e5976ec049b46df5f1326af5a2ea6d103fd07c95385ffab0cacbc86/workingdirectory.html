@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 3 RStudio | Introduktion_til_R</title>
+  <title>Kapitel 5 Working Directory | Introduktion_til_R</title>
   <meta name="description" content="Introduktion til R programmering" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 3 RStudio | Introduktion_til_R" />
+  <meta property="og:title" content="Kapitel 5 Working Directory | Introduktion_til_R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 3 RStudio | Introduktion_til_R" />
+  <meta name="twitter:title" content="Kapitel 5 Working Directory | Introduktion_til_R" />
   
   <meta name="twitter:description" content="Introduktion til R programmering" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hvad-er-r.html"/>
-<link rel="next" href="pakker.html"/>
+<link rel="prev" href="pakker.html"/>
+<link rel="next" href="grundlæggende-r.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -204,41 +204,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rstudio" class="section level1">
-<h1><span class="header-section-number">Kapitel 3</span> RStudio</h1>
-<p>Når R er installeret, kan du bruge det, men for at gøre det nemmere at skrive din R kode brugere vi et <em>Integreret udviklingsmiljø</em> (IDE), der hedder RStudio.</p>
-<p>Der er to muligheder for at bruge RStudio, enten som en applikation (Desktop) der bliver installeret på din computer eller som en cloud løsning hvor du ikke skal installere noget på din computer.</p>
-<div id="rstudio-desktop" class="section level2">
-<h2><span class="header-section-number">3.1</span> RStudio Desktop</h2>
-<p>RStudio Desktop kan installeres på alle operativsystemer; Windows, Mac, Linux.</p>
-<p>Rstudio Dektop fåes I to forskellige versioner; Open Source Edition og RStudio Dektop Pro.
-Det er Open Source Edition jeg bruge på dette kursus: <a href="https://rstudio.com/products/rstudio/download" target="_blank">https://rstudio.com/products/rstudio/download</a></p>
-<p>Selve installation er afhængig af, hvilken computer du har.</p>
-<p><img src="image/rstudio.png" /></p>
-</div>
-<div id="rstudio-cloud" class="section level2">
-<h2><span class="header-section-number">3.2</span> RStudio Cloud</h2>
-<p>Du har også mulighed for at bruge cloud/onlineversionen af RStudio. Det betyder at der ikke er nødvendigt at installere noget for at bruge RSudio.
-Du skal oprette dig som brugere og tilgår cloud løsningen via dette link: <a href="https://rstudio.cloud" target="_blank">https://rstudio.cloud</a>
-Cloud løsningen giver dig de sammen muligheder/funktioner som desktop versionen og den sammen brugereflade.</p>
-<p><img src="image/cloud.png" /></p>
-<p>Cloud løsningen kom i en beta udgave i starten af 2020 og der bliver stadig udviklet på den. Den er dog meget stabil så den kan uden problemer bruges.</p>
-</div>
-<div id="brugerflade" class="section level2">
-<h2><span class="header-section-number">3.3</span> Brugerflade</h2>
-<p>Når du har installeret både R og RStudio, er du klar til seminaret. Starter du RStudio op, vil det typisk se således ud.</p>
-<p><img src="image/rstudio_editor.png" /></p>
-<p>Prøv at skrive, i vinduet nederst til venstre: <em>demo(graphics)</em> og følg vejledningen på skærmen.</p>
+<div id="workingdirectory" class="section level1">
+<h1><span class="header-section-number">Kapitel 5</span> Working Directory</h1>
+<p>R bruger en mappe som <em>Working Directory</em>. Det er nemmere at tilgå filer, der ligger i denne mappe.
+De filer der er placeret i denne mappe kan du tilgå uden at angive stien til filen.</p>
+<p>I RStudio har du to muligheder for at ændre dit “Working Directory”:</p>
+<ol style="list-style-type: decimal">
+<li>Via kode</li>
+<li>Via RStudio - GUI - Grafisk</li>
+</ol>
+<p><strong>Kode</strong></p>
+<p>Du kan se den aktive mappe med: getwd()
+Du kan ændre denne mappe med: setwd(“C:\Users\tuhe\Documents\r_files\”)</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">setwd</span>(<span class="st">&quot;~/GitHub/officegeek_excel_til_r&quot;</span>)</a></code></pre></div>
+<p><strong>GUI</strong></p>
+<p>I den nederste højre del af din skærm skal du gøre følgende:</p>
+<ol style="list-style-type: decimal">
+<li>Vælg mappen <strong>Files</strong></li>
+<li>Find den mappe som du vil gøre til <strong>Working Directory</strong></li>
+<li>Klik på knappen <strong>More</strong></li>
+<li>Vælg <strong>Set As Working Directory</strong></li>
+</ol>
+<p><strong>Tip</strong> - <em>Når du brugere denne metode kan du se den kode der afvikles i det nederste venstre vindue.</em></p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="hvad-er-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pakker.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pakker.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="grundlæggende-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -269,7 +266,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-rstudio.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-workingdirectory.Rmd",
 "text": "Edit"
 },
 "history": {

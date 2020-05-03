@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 3 RStudio | Introduktion_til_R</title>
+  <title>Kapitel 6 Grundlæggende R | Introduktion_til_R</title>
   <meta name="description" content="Introduktion til R programmering" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 3 RStudio | Introduktion_til_R" />
+  <meta property="og:title" content="Kapitel 6 Grundlæggende R | Introduktion_til_R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 3 RStudio | Introduktion_til_R" />
+  <meta name="twitter:title" content="Kapitel 6 Grundlæggende R | Introduktion_til_R" />
   
   <meta name="twitter:description" content="Introduktion til R programmering" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hvad-er-r.html"/>
-<link rel="next" href="pakker.html"/>
+<link rel="prev" href="workingdirectory.html"/>
+<link rel="next" href="datatyper.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -204,31 +204,95 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rstudio" class="section level1">
-<h1><span class="header-section-number">Kapitel 3</span> RStudio</h1>
-<p>Når R er installeret, kan du bruge det, men for at gøre det nemmere at skrive din R kode brugere vi et <em>Integreret udviklingsmiljø</em> (IDE), der hedder RStudio.</p>
-<p>Der er to muligheder for at bruge RStudio, enten som en applikation (Desktop) der bliver installeret på din computer eller som en cloud løsning hvor du ikke skal installere noget på din computer.</p>
-<div id="rstudio-desktop" class="section level2">
-<h2><span class="header-section-number">3.1</span> RStudio Desktop</h2>
-<p>RStudio Desktop kan installeres på alle operativsystemer; Windows, Mac, Linux.</p>
-<p>Rstudio Dektop fåes I to forskellige versioner; Open Source Edition og RStudio Dektop Pro.
-Det er Open Source Edition jeg bruge på dette kursus: <a href="https://rstudio.com/products/rstudio/download" target="_blank">https://rstudio.com/products/rstudio/download</a></p>
-<p>Selve installation er afhængig af, hvilken computer du har.</p>
-<p><img src="image/rstudio.png" /></p>
+<div id="grundlæggende_r" class="section level1">
+<h1><span class="header-section-number">Kapitel 6</span> Grundlæggende R</h1>
+<p>Du kan vælge at skrive dine R kommandoer enten i det øverste vindue til venstre eller det nederste vindue til venstre.</p>
+<p>Forskellen er:</p>
+<ul>
+<li><em>øverst</em> - kan du gemme dine R kommandoer og de afvikles med <em>CTRL + Enter</em></li>
+<li><em>nederst</em> - bliver kommandoen ikke gemt men afviklet når du trykker <em>Enter</em></li>
+</ul>
+<p>Du skal bruge <strong>&lt;-</strong> nårt du vil tildele en værdi til en variable/objekt</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">x &lt;-<span class="st"> </span><span class="dv">10</span></a>
+<a class="sourceLine" id="cb3-2" title="2">navn &lt;-<span class="st"> &quot;Tue&quot;</span></a></code></pre></div>
+<p>Her oprettes to objekter; <em>x</em> og <em>navn</em>
+og de tildeles en værdi.</p>
+<p>Du kan se disse objekter i vinduet øverst til højre under <em>Enviroment</em></p>
+<p><img src="image/objekter.png" /></p>
+<p>Du kan “<em>udlæse</em>” værdien af dine objekter ved at skrive navnet på objektet</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">x</a>
+<a class="sourceLine" id="cb4-2" title="2">navn</a></code></pre></div>
+<div id="funktioner" class="section level2">
+<h2><span class="header-section-number">6.1</span> Funktioner</h2>
+<p>Som i alle andre programmeringssprog har R en masse funktioner, nogle af dem vil du også kunne genkende fra Excel.</p>
+<p>Når man udvider R’s funktionalitet via pakker kommer der også nye funktioner til.</p>
+<p>Her er nogle af de mest almindelige funktioner:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">length</span>(y)     <span class="co"># Antallet af numre i vektoren</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">min</span>(y)        <span class="co"># Minimumsværdien</span></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="kw">max</span>(y)        <span class="co"># Maksimumværdien</span></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="kw">median</span>(y)     <span class="co"># Medianen</span></a>
+<a class="sourceLine" id="cb5-5" title="5"><span class="kw">sum</span>(y)        <span class="co"># Summen</span></a>
+<a class="sourceLine" id="cb5-6" title="6"><span class="kw">mean</span>(y)       <span class="co"># Gennemsnittet</span></a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="kw">var</span>(y)        <span class="co"># Variansen</span></a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="kw">sd</span>(y)         <span class="co"># Standardafvigelsen</span></a></code></pre></div>
+<p>Eksempel på en funktion</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">tal &lt;-<span class="st">  </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="kw">sum</span>(tal)</a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="kw">mean</span>(tal)</a></code></pre></div>
 </div>
-<div id="rstudio-cloud" class="section level2">
-<h2><span class="header-section-number">3.2</span> RStudio Cloud</h2>
-<p>Du har også mulighed for at bruge cloud/onlineversionen af RStudio. Det betyder at der ikke er nødvendigt at installere noget for at bruge RSudio.
-Du skal oprette dig som brugere og tilgår cloud løsningen via dette link: <a href="https://rstudio.cloud" target="_blank">https://rstudio.cloud</a>
-Cloud løsningen giver dig de sammen muligheder/funktioner som desktop versionen og den sammen brugereflade.</p>
-<p><img src="image/cloud.png" /></p>
-<p>Cloud løsningen kom i en beta udgave i starten af 2020 og der bliver stadig udviklet på den. Den er dog meget stabil så den kan uden problemer bruges.</p>
+<div id="logiske-operatorer" class="section level2">
+<h2><span class="header-section-number">6.2</span> Logiske operatorer</h2>
+<p>Når du skriver kode får du meget hurtigt brug for noget logik, det kan være du skal finde alle værdier der er større end middelværdien eller…</p>
+<p>Her er de mest brugte logiske operatorer:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">x <span class="op">==</span><span class="st"> </span><span class="dv">2</span>        <span class="co"># &quot;==&quot; betyder &quot;lig med&quot;</span></a>
+<a class="sourceLine" id="cb7-2" title="2">x <span class="op">!=</span><span class="st"> </span><span class="dv">2</span>        <span class="co"># &quot;!=&quot; betyder &quot;ikke lig med&quot;</span></a>
+<a class="sourceLine" id="cb7-3" title="3">x <span class="op">&lt;</span><span class="st"> </span><span class="dv">1</span>         <span class="co"># &quot;&lt;&quot; betyder &quot;mindre end&quot;</span></a>
+<a class="sourceLine" id="cb7-4" title="4">x <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>         <span class="co"># &quot;&gt;&quot; betyder &quot;større end&quot;</span></a>
+<a class="sourceLine" id="cb7-5" title="5">x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2</span>        <span class="co"># &quot;&lt;=&quot; betyder &quot;mindre eller lig med</span></a></code></pre></div>
+<p><em>Hvis de bare bruges som de står her vil de returnere TRUE eller FALSE</em></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">x &lt;-<span class="st"> </span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb8-2" title="2">x <span class="op">==</span><span class="st"> </span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb8-3" title="3">x <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
 </div>
-<div id="brugerflade" class="section level2">
-<h2><span class="header-section-number">3.3</span> Brugerflade</h2>
-<p>Når du har installeret både R og RStudio, er du klar til seminaret. Starter du RStudio op, vil det typisk se således ud.</p>
-<p><img src="image/rstudio_editor.png" /></p>
-<p>Prøv at skrive, i vinduet nederst til venstre: <em>demo(graphics)</em> og følg vejledningen på skærmen.</p>
+<div id="hjælp" class="section level2">
+<h2><span class="header-section-number">6.3</span> Hjælp</h2>
+<p>R har en rigtig god indbygget hjælpe funktion.
+Du kan enten få hjælpen frem via kode eller via GUI i RStudie.
+Uanset om du brugere kode eller GUI, så bliver hjælpen vist i det nederste højre vindue under fanen <em>Help</em></p>
+<p><img src="image/help.png" /></p>
+<p><strong>GUI</strong>
+I RStudio kan du søge i det lille felt oppe i den højre hjørne af hjælpe vinduet.
+Du kan søge efter funktioner eller hele pakker.</p>
+<p><strong>Kode</strong>
+Kun kan også få hjælpen frem via kode</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">help</span>(<span class="st">&quot;mean&quot;</span>) <span class="co"># Hjælp til en specifik funktion - mean</span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="kw">help</span>(<span class="st">&quot;plot&quot;</span>)</a>
+<a class="sourceLine" id="cb9-3" title="3"></a>
+<a class="sourceLine" id="cb9-4" title="4">?mean </a>
+<a class="sourceLine" id="cb9-5" title="5">?plot</a></code></pre></div>
+<p>Du kan også få hjælp til en specifik pakke - her <strong>base</strong> og <strong>tidyverse</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">help</span>(<span class="dt">package =</span> <span class="st">&quot;base&quot;</span>)</a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="kw">help</span>(<span class="dt">package =</span> <span class="st">&quot;tidyverse&quot;</span>)</a></code></pre></div>
+</div>
+<div id="tidyverse---pipe" class="section level2">
+<h2><span class="header-section-number">6.4</span> tidyverse - pipe</h2>
+<p>Tidyverse pakken som kommer i brug senere i dette kursus, gør brug af en lidt speciel måde at skrive R koden på - <em>pipe</em> som er <em>%&gt;%</em></p>
+<p>Du kan få den “frem” ved at bruge genvejstasten:</p>
+<ul>
+<li>Winows - <em>CTRL + SHIFT + M</em></li>
+<li>Mac - <em>CMD + SHIFT + M</em></li>
+</ul>
+<p>Uden pipe</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">mean</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)</a></code></pre></div>
+<p>Med pipe</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="dv">1</span><span class="op">:</span><span class="dv">10</span> <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="st">    </span><span class="kw">mean</span>()</a></code></pre></div>
+<p>Pipe kan beskrives på følgende måde:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">data <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-2" title="2"><span class="st">    </span>gør<span class="op">-</span><span class="kw">noget</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="st">    </span>gør<span class="op">-</span>noget<span class="op">-</span><span class="kw">andet</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb13-4" title="4"><span class="st">    </span>gør<span class="op">-</span>det<span class="op">-</span><span class="kw">sidste</span>()</a></code></pre></div>
 
 </div>
 </div>
@@ -237,8 +301,8 @@ Cloud løsningen giver dig de sammen muligheder/funktioner som desktop versionen
           </div>
         </div>
       </div>
-<a href="hvad-er-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pakker.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="workingdirectory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="datatyper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -269,7 +333,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-rstudio.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-grundlæggende.Rmd",
 "text": "Edit"
 },
 "history": {

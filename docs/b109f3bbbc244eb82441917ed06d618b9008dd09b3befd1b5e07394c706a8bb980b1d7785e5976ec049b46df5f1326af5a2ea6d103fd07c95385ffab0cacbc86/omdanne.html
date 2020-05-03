@@ -4,35 +4,35 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 7 “Omdanne” | Introduktion til R</title>
-  <meta name="description" content="Kapitel 7 “Omdanne” | Introduktion til R programmering" />
+  <title>Kapitel 10 “Omdanne” | Introduktion_til_R</title>
+  <meta name="description" content="Introduktion til R programmering" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 7 “Omdanne” | Introduktion til R" />
+  <meta property="og:title" content="Kapitel 10 “Omdanne” | Introduktion_til_R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Kapitel 7 “Omdanne” | Introduktion til R programmering" />
+  <meta property="og:description" content="Introduktion til R programmering" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 7 “Omdanne” | Introduktion til R" />
+  <meta name="twitter:title" content="Kapitel 10 “Omdanne” | Introduktion_til_R" />
   
-  <meta name="twitter:description" content="Kapitel 7 “Omdanne” | Introduktion til R programmering" />
+  <meta name="twitter:description" content="Introduktion til R programmering" />
   
 
 <meta name="author" content="Tue Hellstern" />
 
 
-<meta name="date" content="2020-04-26" />
+<meta name="date" content="2020-05-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data.html"/>
-<link rel="next" href="kommuniker.html"/>
+<link rel="prev" href="rens.html"/>
+<link rel="next" href="visualiser.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -128,10 +128,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Webinar - R Introduktion - IDA</a></li>
+<li><a href="./">R_Introduktion</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduktion</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduktion</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#workflow"><i class="fa fa-check"></i><b>1.1</b> Workflow</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#r-kode-filer"><i class="fa fa-check"></i><b>1.2</b> R kode filer</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="hvad-er-r.html"><a href="hvad-er-r.html"><i class="fa fa-check"></i><b>2</b> Hvad er R</a></li>
 <li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> RStudio</a><ul>
 <li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#rstudio-desktop"><i class="fa fa-check"></i><b>3.1</b> RStudio Desktop</a></li>
@@ -142,29 +145,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1" data-path="pakker.html"><a href="pakker.html#pakker-du-skal-bruge"><i class="fa fa-check"></i><b>4.1</b> Pakker du skal bruge</a></li>
 <li class="chapter" data-level="4.2" data-path="pakker.html"><a href="pakker.html#installation"><i class="fa fa-check"></i><b>4.2</b> Installation</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="working-directory.html"><a href="working-directory.html"><i class="fa fa-check"></i><b>5</b> Working Directory</a><ul>
-<li class="chapter" data-level="5.1" data-path="working-directory.html"><a href="working-directory.html#funktioner"><i class="fa fa-check"></i><b>5.1</b> Funktioner</a></li>
-<li class="chapter" data-level="5.2" data-path="working-directory.html"><a href="working-directory.html#logiske-operatorer"><i class="fa fa-check"></i><b>5.2</b> Logiske operatorer</a></li>
-<li class="chapter" data-level="5.3" data-path="working-directory.html"><a href="working-directory.html#hjælp"><i class="fa fa-check"></i><b>5.3</b> Hjælp</a></li>
+<li class="chapter" data-level="5" data-path="workingdirectory.html"><a href="workingdirectory.html"><i class="fa fa-check"></i><b>5</b> Working Directory</a></li>
+<li class="chapter" data-level="6" data-path="grundlæggende-r.html"><a href="grundlæggende-r.html"><i class="fa fa-check"></i><b>6</b> Grundlæggende R</a><ul>
+<li class="chapter" data-level="6.1" data-path="grundlæggende-r.html"><a href="grundlæggende-r.html#funktioner"><i class="fa fa-check"></i><b>6.1</b> Funktioner</a></li>
+<li class="chapter" data-level="6.2" data-path="grundlæggende-r.html"><a href="grundlæggende-r.html#logiske-operatorer"><i class="fa fa-check"></i><b>6.2</b> Logiske operatorer</a></li>
+<li class="chapter" data-level="6.3" data-path="grundlæggende-r.html"><a href="grundlæggende-r.html#hjælp"><i class="fa fa-check"></i><b>6.3</b> Hjælp</a></li>
+<li class="chapter" data-level="6.4" data-path="grundlæggende-r.html"><a href="grundlæggende-r.html#tidyverse---pipe"><i class="fa fa-check"></i><b>6.4</b> tidyverse - pipe</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data</a><ul>
-<li class="chapter" data-level="6.1" data-path="data.html"><a href="data.html#northwind"><i class="fa fa-check"></i><b>6.1</b> Northwind</a></li>
-<li class="chapter" data-level="6.2" data-path="data.html"><a href="data.html#readr"><i class="fa fa-check"></i><b>6.2</b> readr</a></li>
-<li class="chapter" data-level="6.3" data-path="data.html"><a href="data.html#rmysql"><i class="fa fa-check"></i><b>6.3</b> RMySQL</a></li>
-<li class="chapter" data-level="6.4" data-path="data.html"><a href="data.html#terte"><i class="fa fa-check"></i><b>6.4</b> terte</a></li>
+<li class="chapter" data-level="7" data-path="datatyper.html"><a href="datatyper.html"><i class="fa fa-check"></i><b>7</b> Datatyper</a><ul>
+<li class="chapter" data-level="7.1" data-path="datatyper.html"><a href="datatyper.html#typer-af-data"><i class="fa fa-check"></i><b>7.1</b> Typer af data</a></li>
+<li class="chapter" data-level="7.2" data-path="datatyper.html"><a href="datatyper.html#numbers"><i class="fa fa-check"></i><b>7.2</b> Numbers</a></li>
+<li class="chapter" data-level="7.3" data-path="datatyper.html"><a href="datatyper.html#text-strings"><i class="fa fa-check"></i><b>7.3</b> Text (strings)</a></li>
+<li class="chapter" data-level="7.4" data-path="datatyper.html"><a href="datatyper.html#dates-and-times"><i class="fa fa-check"></i><b>7.4</b> Dates and times</a></li>
+<li class="chapter" data-level="7.5" data-path="datatyper.html"><a href="datatyper.html#logicals"><i class="fa fa-check"></i><b>7.5</b> Logicals</a></li>
+<li class="chapter" data-level="7.6" data-path="datatyper.html"><a href="datatyper.html#missing-values"><i class="fa fa-check"></i><b>7.6</b> Missing values</a></li>
+<li class="chapter" data-level="7.7" data-path="datatyper.html"><a href="datatyper.html#vectors"><i class="fa fa-check"></i><b>7.7</b> Vectors</a></li>
+<li class="chapter" data-level="7.8" data-path="datatyper.html"><a href="datatyper.html#factors"><i class="fa fa-check"></i><b>7.8</b> Factors</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="omdanne.html"><a href="omdanne.html"><i class="fa fa-check"></i><b>7</b> “Omdanne”</a><ul>
-<li class="chapter" data-level="7.1" data-path="omdanne.html"><a href="omdanne.html#dplyr"><i class="fa fa-check"></i><b>7.1</b> dplyr</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="omdanne.html"><a href="omdanne.html#eksempler"><i class="fa fa-check"></i><b>7.1.1</b> Eksempler</a></li>
+<li class="chapter" data-level="8" data-path="import.html"><a href="import.html"><i class="fa fa-check"></i><b>8</b> Import</a><ul>
+<li class="chapter" data-level="8.1" data-path="import.html"><a href="import.html#northwind"><i class="fa fa-check"></i><b>8.1</b> Northwind</a></li>
+<li class="chapter" data-level="8.2" data-path="import.html"><a href="import.html#readr"><i class="fa fa-check"></i><b>8.2</b> readr</a></li>
+<li class="chapter" data-level="8.3" data-path="import.html"><a href="import.html#rmysql"><i class="fa fa-check"></i><b>8.3</b> RMySQL</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="rens.html"><a href="rens.html"><i class="fa fa-check"></i><b>9</b> Rens</a><ul>
+<li class="chapter" data-level="9.1" data-path="rens.html"><a href="rens.html#tidyr"><i class="fa fa-check"></i><b>9.1</b> tidyr</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="omdanne.html"><a href="omdanne.html"><i class="fa fa-check"></i><b>10</b> “Omdanne”</a><ul>
+<li class="chapter" data-level="10.1" data-path="omdanne.html"><a href="omdanne.html#dplyr"><i class="fa fa-check"></i><b>10.1</b> dplyr</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="omdanne.html"><a href="omdanne.html#eksempler"><i class="fa fa-check"></i><b>10.1.1</b> Eksempler</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="kommuniker.html"><a href="kommuniker.html"><i class="fa fa-check"></i><b>8</b> Kommuniker</a><ul>
-<li class="chapter" data-level="8.1" data-path="kommuniker.html"><a href="kommuniker.html#shiny"><i class="fa fa-check"></i><b>8.1</b> Shiny</a></li>
-<li class="chapter" data-level="8.2" data-path="kommuniker.html"><a href="kommuniker.html#shinyapps.io"><i class="fa fa-check"></i><b>8.2</b> ShinyApps.io</a></li>
-<li class="chapter" data-level="8.3" data-path="kommuniker.html"><a href="kommuniker.html#opret-forbindelse"><i class="fa fa-check"></i><b>8.3</b> Opret forbindelse</a></li>
-<li class="chapter" data-level="8.4" data-path="kommuniker.html"><a href="kommuniker.html#sfdsfsd"><i class="fa fa-check"></i><b>8.4</b> sfdsfsd</a></li>
-<li class="chapter" data-level="8.5" data-path="kommuniker.html"><a href="kommuniker.html#workflow"><i class="fa fa-check"></i><b>8.5</b> Workflow</a></li>
-<li class="chapter" data-level="8.6" data-path="kommuniker.html"><a href="kommuniker.html#pipe"><i class="fa fa-check"></i><b>8.6</b> pipe</a></li>
+<li class="chapter" data-level="11" data-path="visualiser.html"><a href="visualiser.html"><i class="fa fa-check"></i><b>11</b> Visualiser</a></li>
+<li class="chapter" data-level="12" data-path="kommuniker.html"><a href="kommuniker.html"><i class="fa fa-check"></i><b>12</b> Kommuniker</a><ul>
+<li class="chapter" data-level="12.1" data-path="kommuniker.html"><a href="kommuniker.html#shiny"><i class="fa fa-check"></i><b>12.1</b> Shiny</a></li>
+<li class="chapter" data-level="12.2" data-path="kommuniker.html"><a href="kommuniker.html#shinyapps.io"><i class="fa fa-check"></i><b>12.2</b> ShinyApps.io</a></li>
+<li class="chapter" data-level="12.3" data-path="kommuniker.html"><a href="kommuniker.html#opret-forbindelse"><i class="fa fa-check"></i><b>12.3</b> Opret forbindelse</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="links.html"><a href="links.html"><i class="fa fa-check"></i><b>13</b> Links</a><ul>
+<li class="chapter" data-level="13.1" data-path="links.html"><a href="links.html#sfdsfsd"><i class="fa fa-check"></i><b>13.1</b> sfdsfsd</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -178,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduktion til R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduktion_til_R</a>
           </h1>
         </div>
 
@@ -187,10 +205,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="omdanne" class="section level1">
-<h1><span class="header-section-number">Kapitel 7</span> “Omdanne”</h1>
+<h1><span class="header-section-number">Kapitel 10</span> “Omdanne”</h1>
 <p>Du vil have brug for at ændre de data som du arbejder med. Det kan være at der skal tilføjes nye koloner eller der er koloner der ikke skal bruges til noget.</p>
 <div id="dplyr" class="section level2">
-<h2><span class="header-section-number">7.1</span> dplyr</h2>
+<h2><span class="header-section-number">10.1</span> dplyr</h2>
 <p><img src="image/dplyr.png" />
 dplyr er en <em>grammar of data manipulation</em>
 Du kan læse mere om dplyr pakken her: <a href="https://dplyr.tidyverse.org/index.html" target="_blank">dplyr.tidyverse.org/index.html</a></p>
@@ -203,13 +221,10 @@ Du kan læse mere om dplyr pakken her: <a href="https://dplyr.tidyverse.org/inde
 <li><strong>arrange()</strong> - ændrer rækkefølgen af rækkerne</li>
 </ul>
 <div id="eksempler" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Eksempler</h3>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">starwars <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb12-2" title="2"><span class="st">  </span><span class="kw">mutate</span>(name, <span class="dt">bmi =</span> mass <span class="op">/</span><span class="st"> </span>((height <span class="op">/</span><span class="st"> </span><span class="dv">100</span>)  <span class="op">^</span><span class="st"> </span><span class="dv">2</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb12-3" title="3"><span class="st">  </span><span class="kw">select</span>(name<span class="op">:</span>mass, bmi)</a></code></pre></div>
-
-<p>﻿# Visualiser
-ghjghjghjg</p>
+<h3><span class="header-section-number">10.1.1</span> Eksempler</h3>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1">starwars <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb27-2" title="2"><span class="st">  </span><span class="kw">mutate</span>(name, <span class="dt">bmi =</span> mass <span class="op">/</span><span class="st"> </span>((height <span class="op">/</span><span class="st"> </span><span class="dv">100</span>)  <span class="op">^</span><span class="st"> </span><span class="dv">2</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-3" title="3"><span class="st">  </span><span class="kw">select</span>(name<span class="op">:</span>mass, bmi)</a></code></pre></div>
 
 </div>
 </div>
@@ -219,8 +234,8 @@ ghjghjghjg</p>
           </div>
         </div>
       </div>
-<a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="kommuniker.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rens.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="visualiser.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -251,7 +266,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-omdanne.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/10-omdanne.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -262,7 +277,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["Webinar IDA Introduktion til R - 22-04-2020.pdf", "Webinar IDA Introduktion til R - 22-04-2020.epub"],
+"download": ["Introduktion til R.pdf", "Introduktion til R.epub"],
 "toc": {
 "collapse": "subsection"
 }

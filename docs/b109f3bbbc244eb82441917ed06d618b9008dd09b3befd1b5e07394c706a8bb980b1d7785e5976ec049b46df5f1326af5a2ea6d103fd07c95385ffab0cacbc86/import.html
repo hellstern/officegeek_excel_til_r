@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kapitel 3 RStudio | Introduktion_til_R</title>
+  <title>Kapitel 8 Import | Introduktion_til_R</title>
   <meta name="description" content="Introduktion til R programmering" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Kapitel 3 RStudio | Introduktion_til_R" />
+  <meta property="og:title" content="Kapitel 8 Import | Introduktion_til_R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kapitel 3 RStudio | Introduktion_til_R" />
+  <meta name="twitter:title" content="Kapitel 8 Import | Introduktion_til_R" />
   
   <meta name="twitter:description" content="Introduktion til R programmering" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hvad-er-r.html"/>
-<link rel="next" href="pakker.html"/>
+<link rel="prev" href="datatyper.html"/>
+<link rel="next" href="rens.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -204,31 +204,104 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rstudio" class="section level1">
-<h1><span class="header-section-number">Kapitel 3</span> RStudio</h1>
-<p>Når R er installeret, kan du bruge det, men for at gøre det nemmere at skrive din R kode brugere vi et <em>Integreret udviklingsmiljø</em> (IDE), der hedder RStudio.</p>
-<p>Der er to muligheder for at bruge RStudio, enten som en applikation (Desktop) der bliver installeret på din computer eller som en cloud løsning hvor du ikke skal installere noget på din computer.</p>
-<div id="rstudio-desktop" class="section level2">
-<h2><span class="header-section-number">3.1</span> RStudio Desktop</h2>
-<p>RStudio Desktop kan installeres på alle operativsystemer; Windows, Mac, Linux.</p>
-<p>Rstudio Dektop fåes I to forskellige versioner; Open Source Edition og RStudio Dektop Pro.
-Det er Open Source Edition jeg bruge på dette kursus: <a href="https://rstudio.com/products/rstudio/download" target="_blank">https://rstudio.com/products/rstudio/download</a></p>
-<p>Selve installation er afhængig af, hvilken computer du har.</p>
-<p><img src="image/rstudio.png" /></p>
+<div id="import" class="section level1">
+<h1><span class="header-section-number">Kapitel 8</span> Import</h1>
+<p>De data du vil arbejde med i R skal importeres.
+Når du importere overføre du data til en variabel i Excel.
+R har en dataframe som hedder en tribble som er en nyere version af den orginale R dataframe</p>
+<div id="northwind" class="section level2">
+<h2><span class="header-section-number">8.1</span> Northwind</h2>
+<p>Jeg bruger data fra et fiktivt Microsoft firma - <em>Northwind</em> - de sammen data er tilgængelige via CSV, Excel og en MySQL database.</p>
+<p><strong>CSV</strong></p>
+<ul>
+<li>orders.csv</li>
+<li>order_details.csv</li>
+<li>customers.csv</li>
+<li>products.csv</li>
+<li>employess.csv</li>
+<li>categories.csv</li>
+<li>supliers.csv</li>
+</ul>
+<p><strong>Excel</strong></p>
+<ul>
+<li>northwind.xlsx
+<ul>
+<li>categories</li>
+<li>customers</li>
+<li>employess</li>
+<li>order_details</li>
+<li>orders</li>
+<li>products</li>
+<li>supliers</li>
+</ul></li>
+</ul>
+<p><strong>MySQL</strong> - tabeller</p>
+<ul>
+<li>orders</li>
+<li>order_details</li>
+<li>customers</li>
+<li>products</li>
+<li>employess</li>
+<li>categories</li>
+<li>supliers</li>
+</ul>
 </div>
-<div id="rstudio-cloud" class="section level2">
-<h2><span class="header-section-number">3.2</span> RStudio Cloud</h2>
-<p>Du har også mulighed for at bruge cloud/onlineversionen af RStudio. Det betyder at der ikke er nødvendigt at installere noget for at bruge RSudio.
-Du skal oprette dig som brugere og tilgår cloud løsningen via dette link: <a href="https://rstudio.cloud" target="_blank">https://rstudio.cloud</a>
-Cloud løsningen giver dig de sammen muligheder/funktioner som desktop versionen og den sammen brugereflade.</p>
-<p><img src="image/cloud.png" /></p>
-<p>Cloud løsningen kom i en beta udgave i starten af 2020 og der bliver stadig udviklet på den. Den er dog meget stabil så den kan uden problemer bruges.</p>
+<div id="readr" class="section level2">
+<h2><span class="header-section-number">8.2</span> readr</h2>
+<p>Jeg får meget tit data i Excel filer hvor det er vigtigt med en import funktion der løser opgaven nemt, fleksibet og hurtigt.
+<strong>read_excel</strong> er efter min mening den bedste funktion til import fra Excel filer, den har den fleksibiliatet og funktionalitet jeg har behov for.
+Den har også den fordel at den indlæser data i formatet <strong>tibble</strong>, hvilket gør det nemmere og hurtigere at arbejde med.</p>
+<p><strong>read_excel</strong>, filder selv ud af om det er en <em>.xls</em> eller en <em>,xlsx</em> Excel fil du vil importere. Hvis du kender formatet på din Excel fil, kan du med fordel bruge:</p>
+<ul>
+<li>read_xls</li>
+<li>read_xlsx</li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="kw">library</span>(readxl)</a>
+<a class="sourceLine" id="cb22-2" title="2"></a>
+<a class="sourceLine" id="cb22-3" title="3">salg &lt;-<span class="st"> </span><span class="kw">read_xlsx</span>(<span class="st">&quot;webinar_data.xlsx&quot;</span>)                          <span class="co"># Indlæser første ark</span></a>
+<a class="sourceLine" id="cb22-4" title="4">salg &lt;-<span class="st"> </span><span class="kw">read_xlsx</span>(<span class="st">&quot;webinar_data.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="st">&quot;salgs_data&quot;</span>)    <span class="co"># Indlæser arket &quot;salgs_data&quot;</span></a>
+<a class="sourceLine" id="cb22-5" title="5">salg &lt;-<span class="st"> </span><span class="kw">read_xlsx</span>(<span class="st">&quot;webinar_data.xlsx&quot;</span>, <span class="dt">sheet =</span> <span class="dv">3</span>)               <span class="co"># Indlæser ark 3</span></a></code></pre></div>
+<p><strong>read_excel</strong> har følgende parametere:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1"><span class="kw">read_excel</span>(path, <span class="dt">sheet =</span> <span class="ot">NULL</span>, <span class="dt">range =</span> <span class="ot">NULL</span>, <span class="dt">col_names =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb23-2" title="2">  <span class="dt">col_types =</span> <span class="ot">NULL</span>, <span class="dt">na =</span> <span class="st">&quot;&quot;</span>, <span class="dt">trim_ws =</span> <span class="ot">TRUE</span>, <span class="dt">skip =</span> <span class="dv">0</span>,</a>
+<a class="sourceLine" id="cb23-3" title="3">  <span class="dt">n_max =</span> <span class="ot">Inf</span>, <span class="dt">guess_max =</span> <span class="kw">min</span>(<span class="dv">1000</span>, n_max),</a>
+<a class="sourceLine" id="cb23-4" title="4">  <span class="dt">progress =</span> <span class="kw">readxl_progress</span>(), <span class="dt">.name_repair =</span> <span class="st">&quot;unique&quot;</span>)</a></code></pre></div>
+<ul>
+<li>path</li>
+<li>sheet</li>
+<li>range</li>
+<li>col_names</li>
+<li>col_types</li>
+<li>na</li>
+<li>trim_ws</li>
+<li>skip</li>
+<li>n_max</li>
+<li>guess_max</li>
+<li>progress</li>
+<li>name_repair</li>
+</ul>
 </div>
-<div id="brugerflade" class="section level2">
-<h2><span class="header-section-number">3.3</span> Brugerflade</h2>
-<p>Når du har installeret både R og RStudio, er du klar til seminaret. Starter du RStudio op, vil det typisk se således ud.</p>
-<p><img src="image/rstudio_editor.png" /></p>
-<p>Prøv at skrive, i vinduet nederst til venstre: <em>demo(graphics)</em> og følg vejledningen på skærmen.</p>
+<div id="rmysql" class="section level2">
+<h2><span class="header-section-number">8.3</span> RMySQL</h2>
+<p>Der findes flere pakker der gør det muligt at forbinde RStudio med en MySQL database.
+Her brugere jeg en pakke ved navn <em>RMySQL</em></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;RMySQL&quot;</span>)</a>
+<a class="sourceLine" id="cb24-2" title="2"><span class="kw">library</span>(RMySQL)</a></code></pre></div>
+<p>For at oprette en forbindelse til en MySQL server skal du bruge:</p>
+<ul>
+<li>MySQL bruger -</li>
+<li>Password -</li>
+<li>Databasenavn -</li>
+</ul>
+<p>Jeg har en test MySQL database kørende som du kan forbinde til på denne måde:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1">MinDataBase =<span class="st"> </span><span class="kw">dbConnect</span>(<span class="kw">MySQL</span>(), </a>
+<a class="sourceLine" id="cb25-2" title="2">    <span class="dt">user=</span><span class="st">&#39;User_DataBase&#39;</span>, </a>
+<a class="sourceLine" id="cb25-3" title="3">    <span class="dt">password=</span><span class="st">&#39;Password_DB&#39;</span>, </a>
+<a class="sourceLine" id="cb25-4" title="4">    <span class="dt">dbname=</span><span class="st">&#39;Northwind&#39;</span>, </a>
+<a class="sourceLine" id="cb25-5" title="5">    <span class="dt">host=</span><span class="st">&#39;Your hosting&#39;</span>)</a></code></pre></div>
+<p>For at hente data fra MySQL serveren over til R skal du bruge denne kommando:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1">customers =<span class="st"> </span><span class="kw">dbGetQuery</span>(MinDataBase, <span class="st">&quot;select * from Customers&quot;</span>)</a></code></pre></div>
+<p>Du kan her bruge de SQL kommandoer du normalt ville bruge på MySQL til at udvælge data.</p>
 
 </div>
 </div>
@@ -237,8 +310,8 @@ Cloud løsningen giver dig de sammen muligheder/funktioner som desktop versionen
           </div>
         </div>
       </div>
-<a href="hvad-er-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pakker.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="datatyper.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rens.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -269,7 +342,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-rstudio.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-import.Rmd",
 "text": "Edit"
 },
 "history": {

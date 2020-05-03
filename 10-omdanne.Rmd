@@ -1,8 +1,9 @@
-# "Omdanne"
+# "Omdanne" {#omdanne}
 Du vil have brug for at ændre de data som du arbejder med. Det kan være at der skal tilføjes nye koloner eller der er koloner der ikke skal bruges til noget.
 
 
 ## dplyr
+
 ![](image/dplyr.png)
 dplyr er en *grammar of data manipulation*
 Du kan læse mere om dplyr pakken her: <a href="https://dplyr.tidyverse.org/index.html" target="_blank">dplyr.tidyverse.org/index.html</a>

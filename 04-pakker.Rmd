@@ -1,4 +1,4 @@
-# Pakker
+# Pakker {#pakker}
 Pakker er en meget central del af R.
 En pakker udvide R med lige netop den funktionalitet du har behov for.
 Der findes over 15.000 pakker - så der er nok også en der kan hjælpe dig
@@ -6,6 +6,7 @@ Der findes over 15.000 pakker - så der er nok også en der kan hjælpe dig
 Du finder pakkerne på CRAN (The Comprehensive R Archive Network) - <a href="https://cran.rstudio.com" target="_blank">https://cran.rstudio.com</a> - det er også her fra du kan installere dem. Det er også muligt at installere en pakke fra en fil; zip eller tar.gz
 
 ## Pakker du skal bruge
+
 På dette kursus kommer du til at bruge følgende pakker:
 
 * tidyverse
@@ -18,6 +19,7 @@ På dette kursus kommer du til at bruge følgende pakker:
 * shiny
 
 ## Installation
+
 Du kan installere pakker via R kode eller ved at bruge de grafiske muligher i RStudio.
 Fordelen ved R kode er at du meget nemt kan gøre det sammen igen på f.eks. en anden computer.
 
@@ -30,9 +32,11 @@ Ved begge metoder er der to trin du skal igennem:
 Her bliver pakken hentet og lagt ned på din computer
 
 **Aktivering**
+
 Når pakken er installert, skal du aktivere pakken i den fil hvor du vil bruge den
 
 **Via GUI**
+
 Du kan nemt installere dine pakker via RStudio.
 
 1. Vælg fanen **Packages** i det nederste højre vindue
@@ -46,6 +50,7 @@ Samme sted har du muliged for at opdatere dine pakker og du kan få yderligere i
 
 
 **Via kode**
+
 Der er to kommandoer du skal huske den første installere pakken hvis den ikke er på din computer, den anden *aktivere* pakken fro det script du arbejder i.
 
 1. install.packages("pakke_navn")
