@@ -108,6 +108,7 @@ help(package = "tidyverse")
 
 
 ## tidyverse - pipe
+
 Tidyverse pakken som kommer i brug senere i dette kursus, gør brug af en lidt speciel måde at skrive R koden på - *pipe* som er *%>%*
 
 Du kan få den "frem" ved at bruge genvejstasten:
@@ -132,4 +133,12 @@ data %>%
     gør-noget() %>%
     gør-noget-andet() %>%
     gør-det-sidste()
+    
+northwind_ugedag_salg <- northwind_samlet %>%
+  mutate(Total = Quantity * UnitPrice) %>%
+  mutate(Weekday = weekdays(ShippedDate)) %>%
+  filter(is.na(ShippedDate) == FALSE) %>%
+  select(Weekday, Total) %>%
+  group_by(Weekday) %>%
+  summarise(sum(Total))    
 ```

@@ -4,7 +4,6 @@ Når du importere overføre du data til en variabel i Excel.
 R har en dataframe som hedder en tribble som er en nyere version af den orginale R dataframe
 
 
-
 ## Northwind
 Jeg bruger data fra et fiktivt Microsoft firma - *Northwind* - de sammen data er tilgængelige via CSV, Excel og en MySQL database.
 
@@ -42,6 +41,9 @@ Jeg bruger data fra et fiktivt Microsoft firma - *Northwind* - de sammen data er
 
 
 ## readr
+
+![](image/readr.png)
+
 Jeg får meget tit data i Excel filer hvor det er vigtigt med en import funktion der løser opgaven nemt, fleksibet og hurtigt.
 **read_excel** er efter min mening den bedste funktion til import fra Excel filer, den har den fleksibiliatet og funktionalitet jeg har behov for.
 Den har også den fordel at den indlæser data i formatet **tibble**, hvilket gør det nemmere og hurtigere at arbejde med.
@@ -84,6 +86,9 @@ read_excel(path, sheet = NULL, range = NULL, col_names = TRUE,
 
 
 ## RMySQL
+
+![](image/MySQL-logo.png)
+
 Der findes flere pakker der gør det muligt at forbinde RStudio med en MySQL database.
 Her brugere jeg en pakke ved navn *RMySQL*
 

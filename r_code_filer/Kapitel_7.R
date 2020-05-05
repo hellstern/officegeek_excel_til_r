@@ -19,6 +19,15 @@ class(navn)
 # Date Times
 dagsdato <- Sys.time()
 dagsdato <- format(Sys.time(), "%d-%m-%y")
+dagsdato <- format(Sys.time(), "%a")
+dagsdato <- format(Sys.time(), "%A")
+dagsdato <- format(Sys.time(), "%b")
+dagsdato <- format(Sys.time(), "%B")
+
+dagsdato <- Sys.time()
+weekdays(dagsdato)
+
+dagsdato
 
 mindato_1 <- as.Date("2019-12-24")
 mindato_2 <- as.Date("22-JAN-2020", "%d-%b-%y")
@@ -52,7 +61,6 @@ my_raw <- charToRaw('hello') # raw
 print(my_raw)
 
 # Vector
-
 svar <-  c(1, "ja", 1, "Nej", 2) # chr vector
 value <- c(12, 45, 23, 45, 78)   # num vector
 

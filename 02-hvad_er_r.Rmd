@@ -4,6 +4,9 @@ output:
   html_document: default
 ---
 # Hvad er R {#hvad_er_r}
+
+![](image/R_logo.svg.png)
+
 R er et open-source programmeringssprog der er meget populært blandt statistikere, og andre der arbejder med dataanalyse.
 
 R indeholder en meget bred vifte af analyse-værktøjer, samt gode mulighed for at lave grafik.

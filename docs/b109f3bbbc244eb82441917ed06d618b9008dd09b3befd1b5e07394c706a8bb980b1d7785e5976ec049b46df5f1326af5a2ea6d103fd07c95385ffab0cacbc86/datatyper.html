@@ -24,7 +24,7 @@
 <meta name="author" content="Tue Hellstern" />
 
 
-<meta name="date" content="2020-05-03" />
+<meta name="date" content="2020-05-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -177,9 +177,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11" data-path="visualiser.html"><a href="visualiser.html"><i class="fa fa-check"></i><b>11</b> Visualiser</a></li>
 <li class="chapter" data-level="12" data-path="kommuniker.html"><a href="kommuniker.html"><i class="fa fa-check"></i><b>12</b> Kommuniker</a><ul>
-<li class="chapter" data-level="12.1" data-path="kommuniker.html"><a href="kommuniker.html#shiny"><i class="fa fa-check"></i><b>12.1</b> Shiny</a></li>
-<li class="chapter" data-level="12.2" data-path="kommuniker.html"><a href="kommuniker.html#shinyapps.io"><i class="fa fa-check"></i><b>12.2</b> ShinyApps.io</a></li>
-<li class="chapter" data-level="12.3" data-path="kommuniker.html"><a href="kommuniker.html#opret-forbindelse"><i class="fa fa-check"></i><b>12.3</b> Opret forbindelse</a></li>
+<li class="chapter" data-level="12.1" data-path="kommuniker.html"><a href="kommuniker.html#shinyapps.io"><i class="fa fa-check"></i><b>12.1</b> ShinyApps.io</a></li>
+<li class="chapter" data-level="12.2" data-path="kommuniker.html"><a href="kommuniker.html#opret-forbindelse"><i class="fa fa-check"></i><b>12.2</b> Opret forbindelse</a></li>
+<li class="chapter" data-level="12.3" data-path="kommuniker.html"><a href="kommuniker.html#eksempler-1"><i class="fa fa-check"></i><b>12.3</b> Eksempler</a></li>
+<li class="chapter" data-level="12.4" data-path="kommuniker.html"><a href="kommuniker.html#struktur"><i class="fa fa-check"></i><b>12.4</b> Struktur</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="links.html"><a href="links.html"><i class="fa fa-check"></i><b>13</b> Links</a><ul>
 <li class="chapter" data-level="13.1" data-path="links.html"><a href="links.html#sfdsfsd"><i class="fa fa-check"></i><b>13.1</b> sfdsfsd</a></li>
@@ -269,8 +270,7 @@ Det kan gøre det nemmere at komme i gang med R, da du ikke skal tage hensyn til
 <li>\ - Backslash</li>
 </ul>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">navn &lt;-<span class="st"> &quot;Tue&quot;</span></a>
-<a class="sourceLine" id="cb15-2" title="2"></a>
-<a class="sourceLine" id="cb15-3" title="3"><span class="kw">class</span>(navn) <span class="co"># Retunere typen</span></a></code></pre></div>
+<a class="sourceLine" id="cb15-2" title="2"><span class="kw">class</span>(navn) <span class="co"># Retunere typen</span></a></code></pre></div>
 </div>
 <div id="dates-and-times" class="section level2">
 <h2><span class="header-section-number">7.4</span> Dates and times</h2>
@@ -287,32 +287,32 @@ Dan kan nogle gang godt give lidt problemer, f.eks. når en dato er gemt på den
 </thead>
 <tbody>
 <tr class="odd">
-<td>%Y</td>
+<td><strong>%Y</strong></td>
 <td>Year</td>
 <td>1–9999</td>
 </tr>
 <tr class="even">
-<td>%m</td>
+<td><strong>%m</strong></td>
 <td>Month</td>
 <td>01–12</td>
 </tr>
 <tr class="odd">
-<td>%d</td>
+<td><strong>%d</strong></td>
 <td>Day</td>
 <td>01–31</td>
 </tr>
 <tr class="even">
-<td>%H</td>
+<td><strong>%H</strong></td>
 <td>Hour</td>
 <td>00–23</td>
 </tr>
 <tr class="odd">
-<td>%M</td>
+<td><strong>%M</strong></td>
 <td>Minute</td>
 <td>00–59</td>
 </tr>
 <tr class="even">
-<td>%S</td>
+<td><strong>%S</strong></td>
 <td>Second</td>
 <td>00–59</td>
 </tr>
@@ -331,9 +331,7 @@ Dan kan nogle gang godt give lidt problemer, f.eks. når en dato er gemt på den
 <a class="sourceLine" id="cb16-11" title="11">mindato &lt;-<span class="st"> </span><span class="kw">as.Date</span>(<span class="st">&quot;22-JAN-19&quot;</span>, <span class="st">&quot;%d-%b-%y&quot;</span>)</a>
 <a class="sourceLine" id="cb16-12" title="12">mindato &lt;-<span class="st"> </span><span class="kw">as.Date</span>(<span class="st">&quot;24-12-2019&quot;</span>, <span class="st">&quot;%d-%m-%Y&quot;</span>)</a>
 <a class="sourceLine" id="cb16-13" title="13"></a>
-<a class="sourceLine" id="cb16-14" title="14">mindato</a>
-<a class="sourceLine" id="cb16-15" title="15"></a>
-<a class="sourceLine" id="cb16-16" title="16">?strptime</a></code></pre></div>
+<a class="sourceLine" id="cb16-14" title="14">mindato</a></code></pre></div>
 </div>
 <div id="logicals" class="section level2">
 <h2><span class="header-section-number">7.5</span> Logicals</h2>
@@ -351,17 +349,16 @@ Dan kan nogle gang godt give lidt problemer, f.eks. når en dato er gemt på den
 <p>Du sikkert komme ud for at der <em>“huller”</em> i dine data - Værdier der burde have været der, men af en eller anden grund ikke er tilstede. Fra databaser kender du måske udtrykket “<em>NULL</em>”.</p>
 <p>R håndtere normal disse værdier som NA (<em>Not Available</em>). Som standard er NA en logisk type</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">typeof</span>(x &lt;-<span class="st"> </span><span class="ot">NA</span>)</a>
-<a class="sourceLine" id="cb18-2" title="2"></a>
-<a class="sourceLine" id="cb18-3" title="3">salgstal &lt;-<span class="kw">c</span>(<span class="dv">120</span>, <span class="ot">NA</span>, <span class="dv">110</span>, <span class="dv">140</span>, <span class="ot">NA</span>)</a>
-<a class="sourceLine" id="cb18-4" title="4"></a>
-<a class="sourceLine" id="cb18-5" title="5"><span class="kw">mean</span>(salgstal)</a>
-<a class="sourceLine" id="cb18-6" title="6"><span class="kw">mean</span>(salgstal, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb18-2" title="2">salgstal &lt;-<span class="kw">c</span>(<span class="dv">120</span>, <span class="ot">NA</span>, <span class="dv">110</span>, <span class="dv">140</span>, <span class="ot">NA</span>)</a>
+<a class="sourceLine" id="cb18-3" title="3"></a>
+<a class="sourceLine" id="cb18-4" title="4"><span class="kw">mean</span>(salgstal)</a>
+<a class="sourceLine" id="cb18-5" title="5"><span class="kw">mean</span>(salgstal, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p>Selvom en værdi ikke er til stede (<em>NA</em>), holder R styr på hviklen datatype værdien skulle have været.</p>
 </div>
 <div id="vectors" class="section level2">
 <h2><span class="header-section-number">7.7</span> Vectors</h2>
-<p><strong>Vectors</strong> er det mest bruget object i R.
-Der er seks typer af <strong>vectors</strong>:</p>
+<p><strong>Vectors</strong> er det mest bruget object i R.</p>
+<p>Der er seks typer af <strong>vectors</strong>:</p>
 <ol style="list-style-type: decimal">
 <li>logical</li>
 <li>integer</li>
@@ -389,11 +386,11 @@ Selv når du kun skriver en enkelt værdi i R, bliver det til en <em>vector</em>
 </div>
 <div id="factors" class="section level2">
 <h2><span class="header-section-number">7.8</span> Factors</h2>
-<p><em>Factors</em> er dataobjekter, der bruges til at kategorisere dataene og gemme dem som niveaue
-<em>Factors</em> kan indeholde både <em>character</em> og <em>integer</em>.
-De er nyttige i kolonner, der har et begrænset antal unikke værdier.
-Som f.eks. <em>Mand</em>, <em>Kvinde</em> eller <em>Sand</em>, <em>Falsk</em> osv.
-De er nyttige i dataanalyse til statistisk modellering.</p>
+<p><em>Factors</em> er dataobjekter, der bruges til at kategorisere dataene og gemme dem som niveaue</p>
+<p><em>Factors</em> kan indeholde både <em>character</em> og <em>integer</em>.</p>
+<p>De er nyttige i kolonner, der har et begrænset antal unikke værdier.
+Som f.eks. <em>Mand</em>, <em>Kvinde</em> eller <em>Sand</em>, <em>Falsk</em> osv.</p>
+<p>De er nyttige i dataanalyse til statistisk modellering.</p>
 <p>Faktorer oprettes ved hjælp af funktionen <strong>factor()</strong> ved at tage en <em>vector</em> som input.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1">mk &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;M&quot;</span>, <span class="st">&quot;K&quot;</span>, <span class="st">&quot;K&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;M&quot;</span>)</a>
 <a class="sourceLine" id="cb21-2" title="2">mk_factor &lt;-<span class="st"> </span><span class="kw">factor</span>(mk)</a>

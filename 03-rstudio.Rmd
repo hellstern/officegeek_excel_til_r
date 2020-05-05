@@ -1,5 +1,7 @@
 # RStudio {#rstudio}
 
+![](image/RStudio-Logo.png)
+
 Når R er installeret, kan du bruge det, men for at gøre det nemmere at skrive din R kode brugere vi et *Integreret udviklingsmiljø* (IDE), der hedder RStudio. 
 
 Der er to muligheder for at bruge RStudio, enten som en applikation (Desktop) der bliver installeret på din computer eller som en cloud løsning hvor du ikke skal installere noget på din computer.

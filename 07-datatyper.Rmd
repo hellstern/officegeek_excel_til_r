@@ -55,14 +55,18 @@ Dan kan nogle gang godt give lidt problemer, f.eks. når en dato er gemt på den
 
 Her kommer R funktionen *as.Date* sammen med *format* dig til undsætning.
 
-| Kode   | Betydning  | Område |
-|--------|------------|--------|
-| **%Y** | Year       | 1–9999 |
-| **%m** | Month      | 01–12  |
-| **%d** | Day        | 01–31  |
-| **%H** | Hour       | 00–23  |
-| **%M** | Minute     | 00–59  |
-| **%S** | Second     | 00–59  |
+| Kode   | Betydning      | Område |
+|--------|----------------|--------|
+| **%Y** | Year           | 1–9999 |
+| **%m** | Month          | 01–12  |
+| **%d** | Day            | 01–31  |
+| **%H** | Hour           | 00–23  |
+| **%M** | Minute         | 00–59  |
+| **%S** | Second         | 00–59  |
+| **%a** | Weekday - kort |        |
+| **%A** | Weekday - Lang |        |
+| **%b** | Month - Kort   |        |
+| **%B** | Month - Lang   |        |
 
 ```{r eval=FALSE}
 Sys.time()
@@ -74,11 +78,18 @@ format(Sys.time(), "%H")
 format(Sys.time(), "%M")
 format(Sys.time(), "%S")
 
-mindato <- as.Date("2019-12-24")
-mindato <- as.Date("22-JAN-19", "%d-%b-%y")
-mindato <- as.Date("24-12-2019", "%d-%m-%Y")
+dagsdato <- Sys.time()
+dagsdato <- format(Sys.time(), "%d-%m-%y")
+dagsdato <- format(Sys.time(), "%a")
+dagsdato <- format(Sys.time(), "%A")
+dagsdato <- format(Sys.time(), "%b")
+dagsdato <- format(Sys.time(), "%B")
 
-mindato
+dagsdato
+
+mindato_1 <- as.Date("2019-12-24")
+mindato_2 <- as.Date("22-JAN-2020", "%d-%b-%y")
+mindato_3 <- as.Date("24-12-2019", "%d-%m-%y")
 ```
 
 ## Logicals

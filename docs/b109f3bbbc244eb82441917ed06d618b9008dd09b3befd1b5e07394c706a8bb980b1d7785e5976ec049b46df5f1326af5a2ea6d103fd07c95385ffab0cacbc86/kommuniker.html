@@ -24,7 +24,7 @@
 <meta name="author" content="Tue Hellstern" />
 
 
-<meta name="date" content="2020-05-03" />
+<meta name="date" content="2020-05-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -177,9 +177,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11" data-path="visualiser.html"><a href="visualiser.html"><i class="fa fa-check"></i><b>11</b> Visualiser</a></li>
 <li class="chapter" data-level="12" data-path="kommuniker.html"><a href="kommuniker.html"><i class="fa fa-check"></i><b>12</b> Kommuniker</a><ul>
-<li class="chapter" data-level="12.1" data-path="kommuniker.html"><a href="kommuniker.html#shiny"><i class="fa fa-check"></i><b>12.1</b> Shiny</a></li>
-<li class="chapter" data-level="12.2" data-path="kommuniker.html"><a href="kommuniker.html#shinyapps.io"><i class="fa fa-check"></i><b>12.2</b> ShinyApps.io</a></li>
-<li class="chapter" data-level="12.3" data-path="kommuniker.html"><a href="kommuniker.html#opret-forbindelse"><i class="fa fa-check"></i><b>12.3</b> Opret forbindelse</a></li>
+<li class="chapter" data-level="12.1" data-path="kommuniker.html"><a href="kommuniker.html#shinyapps.io"><i class="fa fa-check"></i><b>12.1</b> ShinyApps.io</a></li>
+<li class="chapter" data-level="12.2" data-path="kommuniker.html"><a href="kommuniker.html#opret-forbindelse"><i class="fa fa-check"></i><b>12.2</b> Opret forbindelse</a></li>
+<li class="chapter" data-level="12.3" data-path="kommuniker.html"><a href="kommuniker.html#eksempler-1"><i class="fa fa-check"></i><b>12.3</b> Eksempler</a></li>
+<li class="chapter" data-level="12.4" data-path="kommuniker.html"><a href="kommuniker.html#struktur"><i class="fa fa-check"></i><b>12.4</b> Struktur</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="links.html"><a href="links.html"><i class="fa fa-check"></i><b>13</b> Links</a><ul>
 <li class="chapter" data-level="13.1" data-path="links.html"><a href="links.html#sfdsfsd"><i class="fa fa-check"></i><b>13.1</b> sfdsfsd</a></li>
@@ -207,13 +208,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="kommuniker" class="section level1">
 <h1><span class="header-section-number">Kapitel 12</span> Kommuniker</h1>
 <p>Med pakken <em>shiny</em> er det muligt for dig at opbygge og dele interaktive web applikationer direkte fra R.</p>
-<p>Du dele dine web applikationer via ShinyApps.io</p>
-<div id="shiny" class="section level2">
-<h2><span class="header-section-number">12.1</span> Shiny</h2>
-<p><a href="https://github.com/abhat222/Data-Science--Cheat-Sheet/blob/master/R%20Cheat%20Sheet/shiny-cheatsheet.pdf" class="uri">https://github.com/abhat222/Data-Science--Cheat-Sheet/blob/master/R%20Cheat%20Sheet/shiny-cheatsheet.pdf</a></p>
-</div>
+<p>Du dele dine web applikationer via <em>ShinyApps.io</em></p>
+<p><img src="image/shiny.jpg" /></p>
 <div id="shinyapps.io" class="section level2">
-<h2><span class="header-section-number">12.2</span> ShinyApps.io</h2>
+<h2><span class="header-section-number">12.1</span> ShinyApps.io</h2>
 <p>Hvis du skal dele det med mange andre, er der muligt at bruge en cloud løsning – ShinyApps.io</p>
 <p>Hvis du vil bruge ShinyApps.io skal følgende være på plads:</p>
 <p>• Du skal også bruge pakken rsconnect
@@ -227,7 +225,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 • Logo fra RStudio i din applikation</p>
 </div>
 <div id="opret-forbindelse" class="section level2">
-<h2><span class="header-section-number">12.3</span> Opret forbindelse</h2>
+<h2><span class="header-section-number">12.2</span> Opret forbindelse</h2>
 <p>For at publicere din applikation på ShinyApps.io skal du gøre følgende:</p>
 <ol style="list-style-type: decimal">
 <li>Opret og test din løsning lokalt</li>
@@ -238,6 +236,46 @@ Du skal gå ind på konto på ShinyApps.io og vælge:
 <strong>Account – Tokens</strong> – Kopier din token – Husk klik på knappen <strong>Show secret</strong> før du kopierer</li>
 </ol>
 <p>ShinyApps.io har en rigtig god dokumentation som du kan finde her: <a href="https://docs.rstudio.com/shinyapps.io/index.html" class="uri">https://docs.rstudio.com/shinyapps.io/index.html</a></p>
+</div>
+<div id="eksempler-1" class="section level2">
+<h2><span class="header-section-number">12.3</span> Eksempler</h2>
+<p><em>Shiny</em> har 11 eksempeler der på en god måde viser de muligheder du har med <em>Shiny</em>.</p>
+<p>Du kan afvikle dem på denne måde:</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="co"># Demo løsninger</span></a>
+<a class="sourceLine" id="cb28-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;shiny&quot;</span>)</a>
+<a class="sourceLine" id="cb28-3" title="3"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb28-4" title="4"></a>
+<a class="sourceLine" id="cb28-5" title="5"><span class="kw">runExample</span>(<span class="st">&quot;01_hello&quot;</span>)</a>
+<a class="sourceLine" id="cb28-6" title="6"><span class="kw">runExample</span>(<span class="st">&quot;02_text&quot;</span>)</a>
+<a class="sourceLine" id="cb28-7" title="7"><span class="kw">runExample</span>(<span class="st">&quot;03_reactivity&quot;</span>)</a>
+<a class="sourceLine" id="cb28-8" title="8"><span class="kw">runExample</span>(<span class="st">&quot;04_mpg&quot;</span>)</a>
+<a class="sourceLine" id="cb28-9" title="9"><span class="kw">runExample</span>(<span class="st">&quot;05_sliders&quot;</span>)</a>
+<a class="sourceLine" id="cb28-10" title="10"><span class="kw">runExample</span>(<span class="st">&quot;06_tabsets&quot;</span>)</a>
+<a class="sourceLine" id="cb28-11" title="11"><span class="kw">runExample</span>(<span class="st">&quot;07_widgets&quot;</span>)</a>
+<a class="sourceLine" id="cb28-12" title="12"><span class="kw">runExample</span>(<span class="st">&quot;08_html&quot;</span>)</a>
+<a class="sourceLine" id="cb28-13" title="13"><span class="kw">runExample</span>(<span class="st">&quot;09_upload&quot;</span>)</a>
+<a class="sourceLine" id="cb28-14" title="14"><span class="kw">runExample</span>(<span class="st">&quot;10_download&quot;</span>)</a>
+<a class="sourceLine" id="cb28-15" title="15"><span class="kw">runExample</span>(<span class="st">&quot;11_timer&quot;</span>)</a></code></pre></div>
+<p>Det gode ved disse eksempler er at kode bliver vist sammen med eksemplet.</p>
+</div>
+<div id="struktur" class="section level2">
+<h2><span class="header-section-number">12.4</span> Struktur</h2>
+<p>En Shimy App er ”samlet” i et enkelt script app.R som du kan afvikle.</p>
+<p>app.R består af tre dele:</p>
+<ul>
+<li>Userinterface (ui.R)<br />
+Her styrer du layout af din applikation</li>
+<li>Server (server.R)<br />
+Her definere du det der skal til for at opbygge din løsning</li>
+<li>Kald til shinyApp function<br />
+Her bygges selev løsningen</li>
+</ul>
+<p>Du kan oprette en ny shiny App under:</p>
+<p><strong>File – New File – Shiny Web App</strong></p>
+<p>I dette vindue skal du indtaste navnet på din App og placeringen. Du har også mulighed for at vælge mellem og din App skal opdeles i to file, ui.R og server.R, eller om du vil have alt i en fil.
+Opdelingen i to filer giver dig de fleste muligheder og en bedre kontrol.
+Du får to filer der indeholder en demo løsning som du kan bruge som
+udgangspunkt for din egen løsning.</p>
 
 </div>
 </div>
